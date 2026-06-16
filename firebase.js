@@ -13,7 +13,6 @@ increment
 from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
 
 const firebaseConfig = {
-apiKey: "AIzaSyBZXq_T-GYDsNFJm1QH-Sf6xdGVIYQFX4w",
 authDomain: "social-media-8c586.firebaseapp.com",
 projectId: "social-media-8c586",
 storageBucket: "social-media-8c586.firebasestorage.app",
