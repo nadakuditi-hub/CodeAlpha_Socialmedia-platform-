@@ -1,0 +1,338 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#fafafa;
+}
+
+/* ================= TOP BAR ================= */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 15px;
+  background:white;
+  border-bottom:1px solid #ddd;
+  position:sticky;
+  top:0;
+}
+
+.logo{
+  font-family:cursive;
+}
+
+/* ================= STORIES ================= */
+.stories{
+  display:flex;
+  overflow-x:auto;
+  padding:10px;
+  background:white;
+  border-bottom:1px solid #eee;
+}
+
+.story{
+  margin-right:12px;
+  text-align:center;
+  font-size:12px;
+}
+
+.story img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:2px solid #ff2d7a;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:20px;
+}
+
+/* ================= FEED (IMPORTANT FIX) ================= */
+.feed{
+  width:580px;   /* 🔥 Instagram standard width */
+}
+
+/* ================= POST CARD ================= */
+.post{
+  background:white;
+  border:1px solid #ddd;
+  border-radius:10px;
+  margin-bottom:20px;
+  overflow:hidden;
+}
+
+/* POST HEADER */
+.post-header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+}
+
+.post-header img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+/* ================= POST IMAGE (EQUAL SIZE FIX) ================= */
+.post-image{
+  width:100%;
+  height:470px;     /* 🔥 ALL POSTS SAME SIZE */
+  object-fit:cover;
+}
+
+/* ================= ACTIONS ================= */
+.post-actions{
+  display:flex;
+  gap:15px;
+  padding:10px;
+  font-size:20px;
+}
+
+.save{
+  margin-left:auto;
+}
+
+/* TEXT */
+.likes, .caption{
+  padding:0 10px 10px;
+  font-size:14px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar{
+  width:300px;
+}
+
+.profile{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.profile img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+}
+
+.suggestion{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:10px 0;
+}
+
+.suggestion img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+/* ================= CREATE POST BOX ================= */
+.create-post{
+  background:white;
+  padding:10px;
+  margin:10px auto;
+  width:350px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+.create-post input,
+.create-post button{
+  width:100%;
+  padding:10px;
+  margin:5px 0;
+}
+
+/* ================= BOTTOM NAV (MOBILE ONLY) ================= */
+.bottom-nav{
+  display:none;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width:768px){
+
+  .sidebar{
+    display:none;
+  }
+
+  .feed{
+    width:100%;
+  }
+
+  .container{
+    padding:10px;
+  }
+
+  .bottom-nav{
+    display:flex;
+    justify-content:space-around;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:white;
+    padding:10px;
+    border-top:1px solid #ddd;
+    font-size:20px;
+  }
+}
+
+/* ================= PROFILE PAGE ================= */
+.profile-header{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:20px;
+}
+
+.profile-header img{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+}
+
+.profile-info{
+  flex:1;
+}
+
+.stats{
+  display:flex;
+  gap:20px;
+  margin-bottom:10px;
+}
+
+.stats div{
+  text-align:center;
+}
+
+.edit-btn{
+  padding:5px 15px;
+  border:none;
+  background:#0095f6;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* HIGHLIGHTS */
+.highlights{
+  display:flex;
+  gap:15px;
+  padding:10px 20px;
+}
+
+.highlight{
+  text-align:center;
+}
+
+.highlight img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:2px solid #ff2d7a;
+}
+
+/* POSTS GRID */
+.grid-title{
+  padding-left:20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:2px;
+  padding:10px;
+}
+
+.grid img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+}
+
+/* SCREEN SYSTEM */
+.screen{
+  display:none;
+}
+
+.screen.active{
+  display:block;
+}
+
+.edit-box{
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+  width:300px;
+  z-index:1000;
+}
+
+.edit-box input{
+  width:100%;
+  padding:8px;
+  margin:5px 0;
+}
+
+
+.edit-box button{
+  padding:10px;
+  margin-top:10px;
+  margin-right:5px;
+}
+.fa-heart{
+  cursor:pointer;
+}
+
+.fa-heart.fa-solid{
+  color:red;
+}
+.comments{
+  padding: 0 10px;
+  margin-top: 5px;
+}
+
+.comments p{
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.comment-box{
+  display:flex;
+  padding:10px;
+  gap:8px;
+}
+
+.comment-box input{
+  flex:1;
+  padding:8px;
+  border:1px solid #ddd;
+  border-radius:5px;
+}
+
+.comment-box button{
+  padding:8px 12px;
+  border:none;
+  background:#0095f6;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}

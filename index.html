@@ -1,0 +1,221 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Instagram Clone</title>  
+  <link rel="stylesheet" href="style.css">    <!-- Icons -->   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+</head> 
+<body>  <!-- ================= HOME SCREEN ================= -->  
+<div id="homeScreen" class="screen active">   
+<!-- TOP NAVBAR -->   
+<header class="topbar">  
+    <h2 class="logo">Instagram</h2>  <div class="top-icons">  
+  <i class="fa-regular fa-heart"></i>  
+  <i class="fa-regular fa-paper-plane"></i>  
+</div>
+
+  </header>  
+  <!-- STORIES -->    
+  <section class="stories">  
+  <div class="story">  
+  <img src="https://i.pravatar.cc/100?img=9">  
+  <span>Your story</span>  
+</div>  
+
+<div class="story">  
+  <img src="https://i.pravatar.cc/100?img=1">  
+  <span>venky</span>  
+</div>  
+
+<div class="story">  
+  <img src="https://i.pravatar.cc/100?img=3">  
+  <span>govind</span>  
+</div>  
+
+<div class="story">  
+  <img src="https://i.pravatar.cc/100?img=4">  
+  <span>raj</span>  
+</div>  
+
+<div class="story">  
+  <img src="https://i.pravatar.cc/100?img=5">  
+  <span>alena</span>  
+</div>  
+
+<div class="story">  
+  <img src="https://i.pravatar.cc/100?img=6">  
+  <span>rohit</span>  
+</div>
+
+  </section>   
+  <!-- CREATE POST -->   
+  <div class="create-post">  
+    <input type="text" id="captionInput" placeholder="Write caption...">  
+    <input type="file" id="imageInput">  
+    <button onclick="createPost()">Post</button>  
+  </div>    
+  <!-- FEED + SIDEBAR -->    
+  <main class="container">  <section class="feed">  
+
+  <!-- POST 1 -->  
+  <div class="post">  
+
+    <div class="post-header">  
+      <img src="https://i.pravatar.cc/100?img=10">  
+      <div>  
+        <h4>john_doe</h4>  
+        <p>New York</p>  
+      </div>  
+      <i class="fa-solid fa-ellipsis"></i>  
+    </div>  
+
+    <img class="post-image" src="https://picsum.photos/600/500">  
+
+    <div class="post-actions">  
+      <i class="fa-regular fa-heart" style="cursor:pointer;"></i>  
+      <i class="fa-regular fa-comment"></i>  
+      <i class="fa-regular fa-paper-plane"></i>  
+      <i class="fa-regular fa-bookmark save"></i>  
+    </div>
+
+<p class="likes">  
+  <span class="likeCount">1700</span> likes  
+</p>  
+<p class="caption"><b>john_doe</b> Enjoying the sunset 🌅</p>  <div class="comments"></div>  <input type="text"  
+class="commentInput"  
+placeholder="Add comment">
+
+<button onclick="addComment(this)">  
+Comment  
+</button>  
+<button onclick="followUser(this)">  
+  Follow  
+</button>  </div>  
+      <!-- POST 2 -->  
+      <div class="post">  <div class="post-header">  
+      <img src="https://i.pravatar.cc/100?img=11">  
+      <div>  
+        <h4>emma_watson</h4>  
+        <p>London</p>  
+      </div>  
+      <i class="fa-solid fa-ellipsis"></i>  
+    </div>  
+
+    <img class="post-image" src="https://picsum.photos/600/501">  
+
+    <div class="post-actions">  
+  <i class="fa-regular fa-heart" style="cursor:pointer;"></i>  
+      <i class="fa-regular fa-comment"></i>  
+      <i class="fa-regular fa-paper-plane"></i>  
+      <i class="fa-regular fa-bookmark save"></i>  
+    </div>
+
+<p class="likes">  
+  <span class="likeCount">1214</span> likes  
+</p>  
+<p class="caption"><b>emma_watson</b> Coffee time ☕</p>  
+<div class="comments"></div>  <input type="text"  
+class="commentInput"  
+placeholder="Add comment">
+
+<button onclick="addComment(this)">  
+Comment  
+</button>  
+<button onclick="followUser(this)">  
+  Follow  
+</button>  </div>  
+      <!-- POST 3 -->  
+      <div class="post">  <div class="post-header">  
+      <img src="https://i.pravatar.cc/100?img=12">  
+      <div>  
+        <h4>david_raj</h4>  
+        <p>India</p>  
+      </div>  
+      <i class="fa-solid fa-ellipsis"></i>  
+    </div>  
+
+    <img class="post-image" src="https://picsum.photos/600/509">  
+
+    <div class="post-actions">  
+      <i class="fa-regular fa-heart" style="cursor:pointer;"></i>  
+      <i class="fa-regular fa-comment"></i>  
+      <i class="fa-regular fa-paper-plane"></i>  
+      <i class="fa-regular fa-bookmark save"></i>  
+    </div>
+
+<p class="likes">  
+  <span class="likeCount">1,3456</span> likes  
+</p>  
+<p class="caption"><b>david_raj</b> Don't show attitude 😎</p>  
+<div class="comments"></div>  <input type="text"  
+class="commentInput"  
+placeholder="Add comment">
+
+<button onclick="addComment(this)">  
+Comment  
+</button>  
+<button onclick="followUser(this)">  
+  Follow  
+</button>  
+</div>  
+   </section>  <!-- SIDEBAR -->  
+<aside class="sidebar">  
+
+  <div class="profile">
+
+<img id="homeProfilePic"  
+src="https://cdn-icons-png.flaticon.com/512/847/847969.png">
+
+  <div>  
+    <b id="homeProfileName">your_name</b>  
+    <p>My Profile</p>  
+  </div>  
+</div>  <h4>Suggestions for you</h4>  
+
+  <div class="suggestion">  
+    <img src="https://i.pravatar.cc/60?img=13">  
+    <div>  
+      <b>user13</b>  
+      <p>Suggested for you</p>  
+    </div>  
+  <button onclick="followUser(this)">
+
+Follow
+</button>
+</div>
+
+<div class="suggestion">  
+    <img src="https://i.pravatar.cc/60?img=14">  
+    <div>  
+      <b>user14</b>  
+      <p>Followed by john</p>  
+    </div>  
+    <button onclick="followUser(this)">
+
+Follow
+</button>
+</div>
+
+</aside>
+
+  </main>  
+</div>  <!-- ================= SEARCH SCREEN ================= -->  <div id="searchScreen" class="screen">  
+  <h2 style="padding:20px;">Search Page</h2>  
+</div>  <!-- ================= PROFILE SCREEN ================= -->  <div id="profileScreen" class="screen">  
+  <h2 style="padding:20px;">Profile Page</h2>  
+</div>  <!-- ================= BOTTOM NAV ================= -->  <footer class="bottom-nav">  <i class="fa-solid fa-house" onclick="window.location.href='index.html'"></i>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<i class="fa-regular fa-square-plus"></i>
+
+<i class="fa-regular fa-heart"></i>
+
+<i class="fa-regular fa-user" onclick="window.location.href='profile.html'"></i>
+
+</footer>  
+<script src="script.js"></script> 
+</body>  
+</html> 
